@@ -34,7 +34,7 @@ resource "aws_docdb_cluster_parameter_group" "main" {
 
 }
 
-resource "aws_docdb_cluster" "docdb" {
+resource "aws_docdb_cluster" "main" {
   cluster_identifier      = "${local.name_prefix}-subnet-group"
   engine                  = "docdb"
   master_username         = data.aws_ssm_parameter.master_username.value
